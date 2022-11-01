@@ -6,7 +6,6 @@ car_cascade = cv2.CascadeClassifier("car.xml")
 
 while True:
     ret, frame = cap.read()
-    frame = cv2.resize(frame, (640,480))
     
     gray = cv2.cvtColor(frame ,cv2.COLOR_BGR2GRAY)
     cars = car_cascade.detectMultiScale(gray, 1.3, 5)
